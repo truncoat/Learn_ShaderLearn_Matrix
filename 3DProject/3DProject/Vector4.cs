@@ -26,5 +26,10 @@ namespace _3DProject
             this.z = v.z;
             this.w = v.w;
         }
+
+        public static vector4 operator -( vector4 a,vector4 b)
+        {
+            return new vector4(a.x-b.x,a.y-b.y,a.z-b.z,a.w-b.w);
+        }
     }
 }

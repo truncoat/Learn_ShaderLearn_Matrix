@@ -9,14 +9,14 @@ namespace _3DProject
 {
     class Triangle3D
     {
-        public vector4 a, b, c;
-        public vector4 A, B, C;
+        public vector4 a, b, c; //世界空间定点
+        public vector4 A, B, C;// 模型空间顶点
         public Triangle3D() { }
         public Triangle3D(vector4 a, vector4 b, vector4 c)
         {
-            this.A =this.a= new vector4(a);
-            this.B =this.b= new vector4(b);
-            this.C =this.c= new vector4(c);
+            this.A = this.a = new vector4(a);
+            this.B = this.b = new vector4(b);
+            this.C = this.c = new vector4(c);
         }
         //三角形利用矩阵乘法变换  传入变换矩阵
         public void TransForm(Matrix4x4 m)
@@ -28,6 +28,11 @@ namespace _3DProject
         }
         //绘制三角形到2d 窗口上
 
+        private vector4 CalculateNormal()
+        {
+            vector4 U = this.b - this.a;
+            return U
+        }
         public void Draw(Graphics g)
         {
             //
@@ -52,7 +57,7 @@ namespace _3DProject
         {
             PointF p = new PointF();
             p.X = (float)(v.x / v.w);//透视除法 向量分量 除以 w分量
-            p.Y =-(float)(v.y / v.w);
+            p.Y = -(float)(v.y / v.w);
             return p;
         }
     }
