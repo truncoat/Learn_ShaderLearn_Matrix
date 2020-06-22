@@ -1,0 +1,10 @@
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.csprojAssemblyReference.cache
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\_3DProject.Properties.Resources.resources
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.csproj.GenerateResource.cache
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\_3DProject.Form1.resources
+C:\Users\administ\source\repos\3DProject\3DProject\bin\Debug\3DProject.exe.config
+C:\Users\administ\source\repos\3DProject\3DProject\bin\Debug\3DProject.exe
+C:\Users\administ\source\repos\3DProject\3DProject\bin\Debug\3DProject.pdb
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.exe
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.pdb
+C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.csproj.CoreCompileInputs.cache
