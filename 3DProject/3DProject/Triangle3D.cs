@@ -11,6 +11,7 @@ namespace _3DProject
     {
         public vector4 a, b, c; //世界空间定点
         public vector4 A, B, C;// 模型空间顶点
+        private vector4 normal;
         public Triangle3D() { }
         public Triangle3D(vector4 a, vector4 b, vector4 c)
         {
@@ -28,10 +29,11 @@ namespace _3DProject
         }
         //绘制三角形到2d 窗口上
 
-        private vector4 CalculateNormal()
+        public void CalculateLighting( Matrix4x4 _Object2world, vector4 Light)
         {
             vector4 U = this.b - this.a;
-            return U
+            vector4 V = this.c - this.a;
+            normal = U.Cross(V);
         }
         public void Draw(Graphics g)
         {

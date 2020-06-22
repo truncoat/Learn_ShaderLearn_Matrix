@@ -109,8 +109,13 @@ namespace _3DProject
             //
             Matrix4x4 m = new Matrix4x4();
             Matrix4x4 Mall = m_RotateX.Mul(m_RotateY).Mul(m_RotateZ);
-            m = m_Scale.Mul(Mall);//模型到世界          
-            Matrix4x4 mv = m.Mul(m_view);
+            m = m_Scale.Mul(Mall);//模型到世界  
+
+            //t.TransForm(m);//三角形应用 世界变换
+            t.CalculateLighting(m, new vector4(-1,1,-1,0));//得到法向量
+
+
+
             Matrix4x4 mvp = m.Mul(m_Projection);
             t.TransForm(m);
             this.Invalidate();
