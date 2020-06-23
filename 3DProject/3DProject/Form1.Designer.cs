@@ -69,7 +69,6 @@
             this.CBX.TabIndex = 5;
             this.CBX.Text = "X";
             this.CBX.UseVisualStyleBackColor = true;
-           
             // 
             // CBY
             // 
@@ -95,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CBZ);
             this.Controls.Add(this.CBY);

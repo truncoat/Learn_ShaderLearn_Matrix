@@ -49,5 +49,13 @@ namespace _3DProject
         {
             return (float)(this.x * v.x + this.y * v.y + this.z * v.z);
         }
+        public vector4 Noralized 
+        {//归一化向量    每个分量除以模长
+            get {
+
+                double mod = Math.Sqrt(x*x+y*y+z*z+w*w);
+                return new vector4(x/mod,y/mod,z/mod,w/mod);
+            }
+        }
     }
 }

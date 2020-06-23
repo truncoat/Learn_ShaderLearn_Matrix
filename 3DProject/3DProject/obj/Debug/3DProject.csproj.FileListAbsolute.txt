@@ -8,3 +8,13 @@ C:\Users\administ\source\repos\3DProject\3DProject\bin\Debug\3DProject.pdb
 C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.exe
 C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.pdb
 C:\Users\administ\source\repos\3DProject\3DProject\obj\Debug\3DProject.csproj.CoreCompileInputs.cache
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\bin\Debug\3DProject.exe.config
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\bin\Debug\3DProject.exe
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\bin\Debug\3DProject.pdb
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\3DProject.csprojAssemblyReference.cache
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\_3DProject.Form1.resources
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\_3DProject.Properties.Resources.resources
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\3DProject.csproj.GenerateResource.cache
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\3DProject.csproj.CoreCompileInputs.cache
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\3DProject.exe
+D:\project\Learn_ShaderLearn_Matrix\3DProject\3DProject\obj\Debug\3DProject.pdb

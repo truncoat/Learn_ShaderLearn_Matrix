@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace _3DProject
     {
         public vector4 a, b, c; //世界空间定点
         public vector4 A, B, C;// 模型空间顶点
-        private vector4 normal;
+        private float  dot;
         public Triangle3D() { }
         public Triangle3D(vector4 a, vector4 b, vector4 c)
         {
@@ -29,17 +30,27 @@ namespace _3DProject
         }
         //绘制三角形到2d 窗口上
 
-        public void CalculateLighting( Matrix4x4 _Object2world, vector4 Light)
+        //
+        public void CalculateLighting( Matrix4x4 _Object2world, vector4 L)
         {
+            this.TransForm( _Object2world);//直接完成世界坐标的变换
             vector4 U = this.b - this.a;
             vector4 V = this.c - this.a;
-            normal = U.Cross(V);
+            vector4 normal = U.Cross(V);
+            dot = normal.Noralized.Dot(L.Noralized);//得到夹角
+            dot = Math.Max(0, dot);
         }
         public void Draw(Graphics g)
         {
-            //
             g.TranslateTransform(300, 300);//挪动坐标原点
-            g.DrawLines(new Pen(Color.Red), this.Get2DPointfArr());
+            g.DrawLines(new Pen(Color.Black,2), this.Get2DPointfArr());
+            GraphicsPath path = new GraphicsPath();
+            path.AddLines(this.Get2DPointfArr());
+            int r = (int)(200 * dot)+55;//保证不会全黑 最低55
+            Color color = Color.FromArgb(r,r,r);
+            Brush br = new SolidBrush(color);
+            g.FillPath(br, path);
+                     
         }
         private PointF[] Get2DPointfArr()
         {
