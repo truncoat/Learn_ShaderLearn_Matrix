@@ -13,6 +13,7 @@ namespace _3DProject
         public vector4 a, b, c; //世界空间定点
         public vector4 A, B, C;// 模型空间顶点
         private float  dot;
+        private bool cullBack = false;
         public Triangle3D() { }
         public Triangle3D(vector4 a, vector4 b, vector4 c)
         {
@@ -39,17 +40,23 @@ namespace _3DProject
             vector4 normal = U.Cross(V);
             dot = normal.Noralized.Dot(L.Noralized);//得到夹角
             dot = Math.Max(0, dot);
+            vector4 E = new vector4(0,0,-1,0);
+            cullBack = normal.Noralized.Dot(E) < 0 ? true : false;//法向量与 视向量的点积小于0 则剔除
         }
         public void Draw(Graphics g)
         {
             g.TranslateTransform(300, 300);//挪动坐标原点
-            g.DrawLines(new Pen(Color.Black,2), this.Get2DPointfArr());
-            GraphicsPath path = new GraphicsPath();
-            path.AddLines(this.Get2DPointfArr());
-            int r = (int)(200 * dot)+55;//保证不会全黑 最低55
-            Color color = Color.FromArgb(r,r,r);
-            Brush br = new SolidBrush(color);
-            g.FillPath(br, path);
+            g.DrawLines(new Pen(Color.Red, 2), this.Get2DPointfArr());
+            if (!cullBack)
+            {               
+                GraphicsPath path = new GraphicsPath();
+                path.AddLines(this.Get2DPointfArr());
+                int r = (int)(200 * dot) + 55;//保证不会全黑 最低55
+                Color color = Color.FromArgb(r, r, r);
+                Brush br = new SolidBrush(color);
+                g.FillPath(br, path);
+            }
+           
                      
         }
         private PointF[] Get2DPointfArr()
